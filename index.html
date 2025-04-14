@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Old CarryG - Bio Link</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      color: white;
+      overflow: hidden;
+      height: 100vh;
+      background-image: url('https://raw.githubusercontent.com/OldCarryG0/oldcarryg/main/ddmzbet-7725a4e6-b957-4210-9e94-303320c520e8_16x9.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    /* Page Load Animation */
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      text-align: center;
+      position: relative;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+
+    /* Profile Picture */
+    .profile-pic {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      animation: slideInDown 1s ease-out forwards;
+    }
+
+    /* Name and Text Animation */
+    .name {
+      font-size: 50px;
+      font-weight: 600;
+      margin: 10px 0;
+      animation: slideInUp 1s ease-out 0.5s forwards;
+    }
+
+    .baka-text {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 60px;
+      color: #ff004f;
+      position: relative;
+      animation: bakaTextAnimation 2s infinite, slideInRight 1s ease-out 1s forwards;
+    }
+
+    @keyframes bakaTextAnimation {
+      0% { transform: scale(1); opacity: 0; }
+      50% { transform: scale(1.2); opacity: 1; }
+      100% { transform: scale(1); opacity: 0; }
+    }
+
+    @keyframes slideInDown {
+      0% { transform: translateY(-50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes slideInUp {
+      0% { transform: translateY(50px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
+    }
+
+    @keyframes slideInRight {
+      0% { transform: translateX(50px); opacity: 0; }
+      100% { transform: translateX(0); opacity: 1; }
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    /* Icon Section */
+    .icon-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: slideInUp 1s ease-out 1s forwards;
+    }
+
+    .icon-container div {
+      text-align: center;
+    }
+
+    .icon-container a {
+      text-decoration: none;
+      color: white;
+      transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .icon-container a:hover {
+      transform: scale(1.2);
+      color: #ffcc00;
+    }
+
+    .social-icon {
+      width: 40px;
+      height: 40px;
+      margin-bottom: 5px;
+      transition: transform 0.3s ease;
+    }
+
+    .social-icon:hover {
+      transform: rotate(360deg);
+    }
+
+    .discord-username {
+      font-size: 16px;
+      margin-top: 8px;
+      color: #7289da;
+      display: none;
+    }
+
+    /* Footer */
+    .footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #888;
+    }
+
+    /* Play Button */
+    #playButton {
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #ff004f;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    #playButton:hover {
+      background-color: #ffcc00;
+    }
+
+    /* Hidden Audio Player */
+    audio {
+      display: none;
+    }
+
+    /* Loading Spinner */
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      animation: fadeOut 2s forwards;
+    }
+
+    .loader .spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #ff004f;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      100% { opacity: 0; visibility: hidden; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Background Audio (Hidden Initially) -->
+  <audio id="bg-music" loop>
+    <source src="https://raw.githubusercontent.com/OldCarryG0/oldcarryg/main/Teeth.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Loading Spinner -->
+  <div class="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Profile Picture -->
+    <img class="profile-pic" src="https://raw.githubusercontent.com/OldCarryG0/oldcarryg/main/ed33fd76-6de6-4c2a-b4c1-6be5380bb6c8Screenshot_20231209_053702_Google.jpg" alt="Old CarryG Profile Picture"/>
+
+    <div class="name">Old CarryG</div>
+    <div class="baka-text">BAKA</div> <!-- This is the text animation you requested -->
+
+    <!-- Play Music Button -->
+    <button id="playButton">Play Music</button>
+
+    <!-- Social Icons -->
+    <div class="icon-container">
+      <!-- Instagram -->
+      <div>
+        <a href="https://www.instagram.com/old_carryg/" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" class="social-icon" alt="Instagram"/>
+          <div>Instagram</div>
+        </a>
+      </div>
+
+      <!-- YouTube -->
+      <div>
+        <a href="https://www.youtube.com/@oldcarryg" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" class="social-icon" alt="YouTube"/>
+          <div>YouTube</div>
+        </a>
+      </div>
+
+      <!-- Spotify -->
+      <div>
+        <a href="https://open.spotify.com/user/enrjb773livgs7qh7osl3258g" target="_blank">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174872.png" class="social-icon" alt="Spotify"/>
+          <div>Spotify</div>
+        </a>
+      </div>
+
+      <!-- Discord -->
+      <div>
+        <a href="javascript:void(0)" onclick="toggleDiscordUsername()">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" class="social-icon" alt="Discord"/>
+          <div>Discord</div>
+        </a>
+        <div id="discord-username" class="discord-username">Username: oldcarryg0</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2025 Old CarryG. All rights reserved.</p>
+    </div>
+  </div>
+
+  <script>
+    // Toggle Discord Username Display
+    function toggleDiscordUsername() {
+      const username = document.getElementById("discord-username");
+      username.style.display = username.style.display === "block" ? "none" : "block";
+    }
+
+    // Play Music Functionality
+    const playButton = document.getElementById('playButton');
+    const bgMusic = document.getElementById('bg-music');
+
+    playButton.addEventListener('click', function() {
+      if (bgMusic.paused) {
+        bgMusic.play();
+        playButton.innerHTML = 'Pause Music';
+      } else {
+        bgMusic.pause();
+        playButton.innerHTML = 'Play Music';
+      }
+    });
+
+    // Hide Loading Spinner after content is loaded
+    window.onload = function() {
+      const loader = document.querySelector('.loader');
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 2000); // 2 seconds delay to hide loader
+    };
+  </script>
+
+</body>
+</html>
