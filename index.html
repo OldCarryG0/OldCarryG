@@ -20,7 +20,7 @@
       position: relative;
     }
 
-    /* Blood Rain (Splatter Style) */
+    /* Blood Rain */
     .rain {
       position: fixed;
       top: 0;
@@ -45,17 +45,9 @@
     }
 
     @keyframes bloodFall {
-      0% {
-        transform: translateY(0) scale(1);
-        opacity: 0.9;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(100vh) scale(0.7);
-        opacity: 0;
-      }
+      0% { transform: translateY(0) scale(1); opacity: 0.9; }
+      50% { opacity: 1; }
+      100% { transform: translateY(100vh) scale(0.7); opacity: 0; }
     }
 
     .drop:nth-child(1) { left: 5%; animation-delay: 0s; }
@@ -69,6 +61,7 @@
     .drop:nth-child(9) { left: 85%; animation-delay: 1.8s; transform: scale(1.3); }
     .drop:nth-child(10){ left: 95%; animation-delay: 0.3s; }
 
+    /* Page Load Animation */
     .container {
       display: flex;
       flex-direction: column;
@@ -78,6 +71,12 @@
       text-align: center;
       position: relative;
       z-index: 2;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
     }
 
     .profile-pic {
@@ -154,6 +153,7 @@
       color: #888;
     }
 
+    /* Play Button */
     #playButton {
       padding: 10px 20px;
       font-size: 18px;
@@ -170,24 +170,58 @@
       background-color: #ffcc00;
     }
 
+    /* Hidden Audio Player */
     audio {
       display: none;
+    }
+
+    /* Loading Spinner */
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      animation: fadeOut 2s forwards;
+    }
+
+    .loader .spinner {
+      border: 4px solid #f3f3f3;
+      border-top: 4px solid #ff004f;
+      border-radius: 50%;
+      width: 60px;
+      height: 60px;
+      animation: spin 1s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    @keyframes fadeOut {
+      0% { opacity: 1; }
+      100% { opacity: 0; visibility: hidden; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Blood Rain Splatter -->
+  <!-- Loading Spinner -->
+  <div class="loader">
+    <div class="spinner"></div>
+  </div>
+
+  <!-- Blood Rain -->
   <div class="rain">
-    <div class="drop"></div>
-    <div class="drop"></div>
-    <div class="drop"></div>
-    <div class="drop"></div>
-    <div class="drop"></div>
-    <div class="drop"></div>
-    <div class="drop"></div>
-    <div class="drop"></div>
-    <div class="drop"></div>
+    <div class="drop"></div><div class="drop"></div><div class="drop"></div>
+    <div class="drop"></div><div class="drop"></div><div class="drop"></div>
+    <div class="drop"></div><div class="drop"></div><div class="drop"></div>
     <div class="drop"></div>
   </div>
 
@@ -203,7 +237,7 @@
     <div class="name">Old CarryG</div>
     <div class="baka-text">BAKA</div>
 
-    <button id="playButton" onclick="document.getElementById('bg-music').play()">Play Music</button>
+    <button id="playButton">Play Music</button>
 
     <div class="icon-container">
       <div>
@@ -224,8 +258,9 @@
           <div>Spotify</div>
         </a>
       </div>
+      <!-- Discord -->
       <div>
-        <a href="#" onclick="document.getElementById('discord-username').style.display = 'block'">
+        <a href="javascript:void(0)" onclick="toggleDiscordUsername()">
           <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" class="social-icon" alt="Discord"/>
           <div>Discord</div>
         </a>
@@ -238,5 +273,34 @@
     </div>
   </div>
 
+  <script>
+    // Toggle Discord Username Display
+    function toggleDiscordUsername() {
+      const username = document.getElementById("discord-username");
+      username.style.display = (username.style.display === "block") ? "none" : "block";
+    }
+
+    // Play Music Toggle
+    const playButton = document.getElementById('playButton');
+    const bgMusic = document.getElementById('bg-music');
+
+    playButton.addEventListener('click', function () {
+      if (bgMusic.paused) {
+        bgMusic.play();
+        playButton.textContent = "Pause Music";
+      } else {
+        bgMusic.pause();
+        playButton.textContent = "Play Music";
+      }
+    });
+
+    // Hide Loading Spinner
+    window.onload = function () {
+      const loader = document.querySelector('.loader');
+      setTimeout(() => {
+        loader.style.display = 'none';
+      }, 2000);
+    };
+  </script>
 </body>
 </html>
