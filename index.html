@@ -1,306 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Old CarryG </title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: 'Poppins', sans-serif;
-      color: white;
-      overflow: hidden;
-      height: 100vh;
-      background-image: url('https://raw.githubusercontent.com/OldCarryG0/oldcarryg/main/ddmzbet-7725a4e6-b957-4210-9e94-303320c520e8_16x9.png');
-      background-size: cover;
-      background-position: center;
-      background-attachment: fixed;
-      position: relative;
-    }
+<!DOCTYPE html> <html lang="en"> <head> <meta charset="UTF-8"/> <meta name="viewport" content="width=device-width, initial-scale=1.0"/> <title>Old CarryG | Bio</title> <!-- SEO & Theming --> <meta name="description" content="Old CarryG — creator. Links, music, and more. Follow on Instagram, YouTube, and Spotify."> <meta property="og:title" content="Old CarryG | Bio"> <meta property="og:description" content="Links, music, and more."> <meta property="og:image" content="OG_IMAGE_1200x630.jpg"> <meta name="theme-color" content="#ff004f"> <!-- Fonts (prevent FOIT) --> <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Poppins:wght@400;600&display=swap" rel="stylesheet"/> <!-- Preloads (optional, change to your asset URLs) --> <!-- <link rel="preload" as="image" href="HERO_1920_WEBP"> --> <!-- <link rel="preload" as="audio" href="https://raw.githubusercontent.com/OldCarryG0/oldcarryg/main/Teeth.mp3"> --> <style> :root { --primary: #ff004f; --accent: #ffcc00; --bg-overlay: rgba(10, 10, 15, 0.76); --text: #ffffff; --shadow: rgba(0,0,0,0.3); } /* Base */ body { margin: 0; padding: 0; min-height: 100vh; font-family: 'Poppins', sans-serif; color: var(--text); background: #0b0b10; /* If you have optimized WebPs, use image-set below; else use your original image URL */ /* background-image: image-set( url('HERO_1280_WEBP') type('image/webp') 1x, url('HERO_1920_WEBP') type('image/webp') 2x ); */ background-image: url('https://raw.githubusercontent.com/OldCarryG0/oldcarryg/main/ddmzbet-7725a4e6-b957-4210-9e94-303320c520e8_16x9.png'); background-position: center; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; position: relative; } /* Readability overlay */ body::before { content: ""; position: fixed; inset: 0; background: radial-gradient(ellipse at center, rgba(0,0,0,0.35), rgba(0,0,0,0.7)); z-index: 0; pointer-events: none; } /* Blood Rain */ .rain { pointer-events: none; z-index: 1; position: fixed; inset: 0; overflow: hidden; } .drop { position: absolute; top: -10%; width: 15px; height: 15px; background: radial-gradient(circle, #8b0000 0%, #5a0000 70%, transparent 100%); border-radius: 50%; opacity: 0.9; filter: blur(1px); animation: bloodFall 3s linear infinite; will-change: transform, opacity; } @keyframes bloodFall { 0% { transform: translateY(0) scale(1); opacity: 0.9; } 50% { opacity: 1; } 100% { transform: translateY(100vh) scale(0.7); opacity: 0; } } .drop:nth-child(1) { left: 5%; animation-delay: 0s; } .drop:nth-child(2) { left: 15%; animation-delay: 0.5s; transform: scale(1.2); } .drop:nth-child(3) { left: 25%; animation-delay: 1s; transform: scale(0.8); } .drop:nth-child(4) { left: 35%; animation-delay: 1.5s; } .drop:nth-child(5) { left: 45%; animation-delay: 2s; transform: scale(1.5); } .drop:nth-child(6) { left: 55%; animation-delay: 2.5s; transform: scale(0.9); } .drop:nth-child(7) { left: 65%; animation-delay: 1.2s; } .drop:nth-child(8) { left: 75%; animation-delay: 0.8s; transform: scale(1.1); } .drop:nth-child(9) { left: 85%; animation-delay: 1.8s; transform: scale(1.3); } .drop:nth-child(10){ left: 95%; animation-delay: 0.3s; } /* Card */ .container { z-index: 2; position: relative; background: var(--bg-overlay); max-width: 420px; margin: 60px auto; border-radius: 18px; box-shadow: 0 4px 24px rgba(0,0,0,0.18); padding: 32px 22px 24px 22px; text-align: center; backdrop-filter: blur(3px); display: flex; flex-direction: column; align-items: center; animation: fadeIn 1.3s; } @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } } .profile-pic { width: 130px; height: 130px; object-fit: cover; border-radius: 50%; border: 5px solid var(--primary); box-shadow: 0 2px 8px var(--shadow); margin-bottom: 20px; background: #222; transition: border 0.2s; } .profile-pic:hover { border-color: var(--accent); } h1.name { font-size: 2.15rem; font-weight: 600; margin: 0 0 7px 0; letter-spacing: 1px; text-shadow: 0 2px 12px rgba(0,0,0,0.4); } .baka-text { font-family: 'Press Start 2P', cursive; font-size: 1.2rem; color: var(--primary); margin-bottom: 10px; animation: bakaTextAnimation 2s infinite; letter-spacing: 2px; text-shadow: 2px 2px 8px #000; } @keyframes bakaTextAnimation { 0% { transform: scale(1); opacity: 0; } 50% { transform: scale(1.08); opacity: 1; } 100% { transform: scale(1); opacity: 0; } } /* Socials */ .icon-container { display: flex; flex-wrap: wrap; gap: 24px; justify-content: center; margin: 28px 0 10px 0; } .icon-container a, .icon-container button { text-decoration: none; color: inherit; outline: none; border-radius: 10px; display: flex; flex-direction: column; align-items: center; min-width: 80px; padding: 6px 4px; background: none; border: none; cursor: pointer; } .icon-container .social-icon { width: 44px; height: 44px; margin-bottom: 5px; background: none !important; box-shadow: none !important; border: none !important; filter: none !important; transition: box-shadow 0.22s, transform 0.18s cubic-bezier(.62,-0.01,.44,1.5); will-change: transform, box-shadow; } /* Generic hover scale */ .icon-container a:hover .social-icon, .icon-container a:focus .social-icon, .icon-container button:hover .social-icon, .icon-container button:focus .social-icon { transform: scale(1.13); } /* Per-network glow */ .icon-container a.instagram:hover .social-icon, .icon-container a.instagram:focus .social-icon { box-shadow: 0 0 20px 2px #fd1d1d88, 0 0 26px 2px #F58529, 0 0 18px 2px #ffdc80cc; } .icon-container a.youtube:hover .social-icon, .icon-container a.youtube:focus .social-icon { box-shadow: 0 0 32px 8px #FF0000, 0 0 14px 2px #fff4; } .icon-container a.spotify:hover .social-icon, .icon-container a.spotify:focus .social-icon { box-shadow: 0 0 26px 9px #1db954, 0 0 14px 2px #fff8; } .icon-container .discord:hover .social-icon, .icon-container .discord:focus .social-icon { box-shadow: 0 0 20px 9px #7289da, 0 0 12px 2px #fff5; } /* Focus visible */ :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 6px; } /* Discord username pill */ #discord-username { opacity: 0; max-height: 0; transition: opacity 0.5s, max-height 0.5s; color: #7289da; margin-top: 8px; font-size: 14px; background: #1a222dbb; border-radius: 7px; padding: 5px 14px; overflow: hidden; display: inline-block; pointer-events: none; user-select: all; } #discord-username.active { opacity: 1; max-height: 38px; pointer-events: auto; } .footer { margin-top: 32px; font-size: 15px; color: #cccccc; } /* Play button */ #playButton { padding: 10px 30px; font-size: 18px; background-color: var(--primary); color: #fff; outline: none; border: none; border-radius: 7px; margin: 18px 0 5px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.15); cursor: pointer; transition: background 0.2s, color 0.2s; } #playButton:hover, #playButton:focus-visible { background: var(--accent); color: #111; } audio { display: none; } /* Toast */ #copy-toast { position: fixed; left: 50%; top: 20px; transform: translateX(-50%); background: #1a222d; color: #fff; padding: 8px 12px; border-radius: 8px; display: none; z-index: 9999; box-shadow: 0 6px 18px rgba(0,0,0,0.25); font-size: 14px; } /* Reduced motion */ @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } .rain { display: none; } .baka-text { opacity: 1; } } /* Mobile */ @media (max-width:600px){ .container { max-width: 96vw; margin: 20px 2%; } h1.name { font-size: 1.5rem; } .baka-text { font-size: 0.95rem; } .profile-pic { width: 100px; height: 100px; } .icon-container { gap: 16px; } } </style> </head> <body> <!-- Blood Rain --> <div class="rain" aria-hidden="true"> <div class="drop"></div><div class="drop"></div><div class="drop"></div> <div class="drop"></div><div class="drop"></div><div class="drop"></div> <div class="drop"></div><div class="drop"></div><div class="drop"></div> <div class="drop"></div> </div> <!-- Background Music --> <audio id="bg-music" preload="metadata" loop> <source src="https://raw.githubusercontent.com/OldCarryG0/oldcarryg/main/Teeth.mp3" type="audio/mpeg"> Your browser does not support the audio element. </audio> <div class="container" role="main"> <img class="profile-pic" width="130" height="130" src="https://raw.githubusercontent.com/OldCarryG0/oldcarryg/main/ed33fd76-6de6-4c2a-b4c1-6be5380bb6c8Screenshot_20231209_053702_Google.jpg" alt="Old CarryG Profile Picture" loading="lazy"/>
+text
+<h1 class="name">Old CarryG</h1>
+<div class="baka-text" aria-hidden="true">BAKA</div>
 
-    /* Blood Rain */
-    .rain {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      pointer-events: none;
-      overflow: hidden;
-      z-index: 1;
-    }
+<button id="playButton" aria-pressed="false">Play Music</button>
 
-    .drop {
-      position: absolute;
-      top: -10%;
-      width: 15px;
-      height: 15px;
-      background: radial-gradient(circle, #8b0000 0%, #5a0000 70%, transparent 100%);
-      border-radius: 50%;
-      opacity: 0.9;
-      animation: bloodFall 3s linear infinite;
-      filter: blur(1px);
-    }
+<nav class="icon-container" aria-label="Social Links">
+  <a href="https://www.instagram.com/old_carryg/" class="instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+    <img width="44" height="44" src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" class="social-icon" alt="Instagram"/>
+    <div>Instagram</div>
+  </a>
+  <a href="https://www.youtube.com/@oldcarryg" class="youtube" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+    <img width="44" height="44" src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" class="social-icon" alt="YouTube"/>
+    <div>YouTube</div>
+  </a>
+  <a href="https://open.spotify.com/user/enrjb773livgs7qh7osl3258g" class="spotify" target="_blank" rel="noopener noreferrer" aria-label="Spotify">
+    <img width="44" height="44" src="https://cdn-icons-png.flaticon.com/512/174/174872.png" class="social-icon" alt="Spotify"/>
+    <div>Spotify</div>
+  </a>
 
-    @keyframes bloodFall {
-      0% { transform: translateY(0) scale(1); opacity: 0.9; }
-      50% { opacity: 1; }
-      100% { transform: translateY(100vh) scale(0.7); opacity: 0; }
-    }
+  <!-- Discord as a button for semantics -->
+  <button class="discord" id="discord-link" aria-controls="discord-username" aria-expanded="false" aria-label="Copy Discord username">
+    <img width="44" height="44" src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" class="social-icon" alt="" aria-hidden="true"/>
+    <div>Discord</div>
+  </button>
+</nav>
 
-    .drop:nth-child(1) { left: 5%; animation-delay: 0s; }
-    .drop:nth-child(2) { left: 15%; animation-delay: 0.5s; transform: scale(1.2); }
-    .drop:nth-child(3) { left: 25%; animation-delay: 1s; transform: scale(0.8); }
-    .drop:nth-child(4) { left: 35%; animation-delay: 1.5s; }
-    .drop:nth-child(5) { left: 45%; animation-delay: 2s; transform: scale(1.5); }
-    .drop:nth-child(6) { left: 55%; animation-delay: 2.5s; transform: scale(0.9); }
-    .drop:nth-child(7) { left: 65%; animation-delay: 1.2s; }
-    .drop:nth-child(8) { left: 75%; animation-delay: 0.8s; transform: scale(1.1); }
-    .drop:nth-child(9) { left: 85%; animation-delay: 1.8s; transform: scale(1.3); }
-    .drop:nth-child(10){ left: 95%; animation-delay: 0.3s; }
+<span id="discord-username">Username: oldcarryg</span>
 
-    /* Page Load Animation */
-    .container {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      text-align: center;
-      position: relative;
-      z-index: 2;
-      opacity: 0;
-      animation: fadeIn 2s forwards;
-    }
-
-    @keyframes fadeIn {
-      to { opacity: 1; }
-    }
-
-    .profile-pic {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin-bottom: 20px;
-    }
-
-    .name {
-      font-size: 50px;
-      font-weight: 600;
-      margin: 10px 0;
-    }
-
-    .baka-text {
-      font-family: 'Press Start 2P', cursive;
-      font-size: 60px;
-      color: #ff004f;
-      animation: bakaTextAnimation 2s infinite;
-    }
-
-    @keyframes bakaTextAnimation {
-      0% { transform: scale(1); opacity: 0; }
-      50% { transform: scale(1.2); opacity: 1; }
-      100% { transform: scale(1); opacity: 0; }
-    }
-
-    .icon-container {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      margin-top: 30px;
-      flex-wrap: wrap;
-    }
-
-    .icon-container div {
-      text-align: center;
-    }
-
-    .icon-container a {
-      text-decoration: none;
-      color: white;
-      transition: transform 0.3s ease, color 0.3s ease;
-    }
-
-    .icon-container a:hover {
-      transform: scale(1.2);
-      color: #ffcc00;
-    }
-
-    .social-icon {
-      width: 40px;
-      height: 40px;
-      margin-bottom: 5px;
-      transition: transform 0.3s ease;
-    }
-
-    .social-icon:hover {
-      transform: rotate(360deg);
-    }
-
-    .discord-username {
-      font-size: 16px;
-      margin-top: 8px;
-      color: #7289da;
-      display: none;
-    }
-
-    .footer {
-      margin-top: 40px;
-      font-size: 14px;
-      color: #888;
-    }
-
-    /* Play Button */
-    #playButton {
-      padding: 10px 20px;
-      font-size: 18px;
-      background-color: #ff004f;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      margin-top: 20px;
-      transition: background-color 0.3s ease;
-    }
-
-    #playButton:hover {
-      background-color: #ffcc00;
-    }
-
-    /* Hidden Audio Player */
-    audio {
-      display: none;
-    }
-
-    /* Loading Spinner */
-    .loader {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.8);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-      animation: fadeOut 2s forwards;
-    }
-
-    .loader .spinner {
-      border: 4px solid #f3f3f3;
-      border-top: 4px solid #ff004f;
-      border-radius: 50%;
-      width: 60px;
-      height: 60px;
-      animation: spin 1s linear infinite;
-    }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    @keyframes fadeOut {
-      0% { opacity: 1; }
-      100% { opacity: 0; visibility: hidden; }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Loading Spinner -->
-  <div class="loader">
-    <div class="spinner"></div>
-  </div>
-
-  <!-- Blood Rain -->
-  <div class="rain">
-    <div class="drop"></div><div class="drop"></div><div class="drop"></div>
-    <div class="drop"></div><div class="drop"></div><div class="drop"></div>
-    <div class="drop"></div><div class="drop"></div><div class="drop"></div>
-    <div class="drop"></div>
-  </div>
-
-  <!-- Background Music -->
-  <audio id="bg-music" loop>
-    <source src="https://raw.githubusercontent.com/OldCarryG0/oldcarryg/main/Teeth.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
-  </audio>
-
-  <!-- Main Content -->
-  <div class="container">
-    <img class="profile-pic" src="https://raw.githubusercontent.com/OldCarryG0/oldcarryg/main/ed33fd76-6de6-4c2a-b4c1-6be5380bb6c8Screenshot_20231209_053702_Google.jpg" alt="Old CarryG Profile Picture"/>
-    <div class="name">Old CarryG</div>
-    <div class="baka-text">BAKA</div>
-
-    <button id="playButton">Play Music</button>
-
-    <div class="icon-container">
-      <div>
-        <a href="https://www.instagram.com/old_carryg/" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" class="social-icon" alt="Instagram"/>
-          <div>Instagram</div>
-        </a>
-      </div>
-      <div>
-        <a href="https://www.youtube.com/@oldcarryg" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384060.png" class="social-icon" alt="YouTube"/>
-          <div>YouTube</div>
-        </a>
-      </div>
-      <div>
-        <a href="https://open.spotify.com/user/enrjb773livgs7qh7osl3258g" target="_blank">
-          <img src="https://cdn-icons-png.flaticon.com/512/174/174872.png" class="social-icon" alt="Spotify"/>
-          <div>Spotify</div>
-        </a>
-      </div>
-      <!-- Discord -->
-      <div>
-        <a href="javascript:void(0)" onclick="toggleDiscordUsername()">
-          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" class="social-icon" alt="Discord"/>
-          <div>Discord</div>
-        </a>
-        <div id="discord-username" class="discord-username">Username: oldcarryg</div>
-      </div>
-    </div>
-
-    <div class="footer">
-      <p>&copy; 2025 Old CarryG. All rights reserved.</p>
-    </div>
-  </div>
-
-  <script>
-    // Toggle Discord Username Display
-    function toggleDiscordUsername() {
-      const username = document.getElementById("discord-username");
-      username.style.display = (username.style.display === "block") ? "none" : "block";
-    }
-
-    // Play Music Toggle
-    const playButton = document.getElementById('playButton');
-    const bgMusic = document.getElementById('bg-music');
-
-    playButton.addEventListener('click', function () {
-      if (bgMusic.paused) {
-        bgMusic.play();
-        playButton.textContent = "Pause Music";
-      } else {
-        bgMusic.pause();
-        playButton.textContent = "Play Music";
-      }
-    });
-
-    // Hide Loading Spinner
-    window.onload = function () {
-      const loader = document.querySelector('.loader');
-      setTimeout(() => {
-        loader.style.display = 'none';
-      }, 2000);
-    };
-  </script>
-</body>
-</html>
+<div class="footer">
+  <p>&copy; 2025 Old CarryG. All rights reserved.</p>
+</div>
+</div> <!-- Copy toast --> <div id="copy-toast" role="status" aria-live="polite">Copied!</div> <script> // Discord username toggle + copy to clipboard const discordBtn = document.getElementById('discord-link'); const discordUsername = document.getElementById('discord-username'); const toast = document.getElementById('copy-toast'); const DISCORD_USER = 'oldcarryg'; function showToast(msg = 'Copied!') { toast.textContent = msg; toast.style.display = 'block'; clearTimeout(showToast._t); showToast._t = setTimeout(() => { toast.style.display = 'none'; }, 1200); } function toggleUsername() { const isActive = discordUsername.classList.toggle('active'); discordBtn.setAttribute('aria-expanded', String(isActive)); } discordBtn.addEventListener('click', async (e) => { e.preventDefault(); try { await navigator.clipboard.writeText(DISCORD_USER); toggleUsername(); showToast('Discord copied: ' + DISCORD_USER); } catch { toggleUsername(); showToast('Username: ' + DISCORD_USER); } }); discordBtn.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); discordBtn.click(); } }); // Play Music Toggle + accessibility const playButton = document.getElementById('playButton'); const bgMusic = document.getElementById('bg-music'); const updatePlayState = () => { if (bgMusic.paused) { playButton.textContent = 'Play Music'; playButton.setAttribute('aria-pressed', 'false'); } else { playButton.textContent = 'Pause Music'; playButton.setAttribute('aria-pressed', 'true'); } }; playButton.addEventListener('click', function () { if (bgMusic.paused) { bgMusic.play().catch(() => {/* ignore play rejection */}); } else { bgMusic.pause(); } }); playButton.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') playButton.click(); }); bgMusic.addEventListener('play', updatePlayState); bgMusic.addEventListener('pause', updatePlayState); // Initialize UI state discordUsername.classList.remove('active'); updatePlayState(); </script> </body> </html>
